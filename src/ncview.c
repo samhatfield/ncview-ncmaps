@@ -51,6 +51,9 @@
 #include "colormaps_hotres.h"
 #include "colormaps_ssec.h"
 
+/* Scientific color maps */
+#include "colormaps_batlow.h"
+
 /* Program defaults in a easy-to-find place */
 #define DEFAULT_INVERT_PHYSICAL	FALSE
 #define DEFAULT_INVERT_COLORS	FALSE
@@ -512,6 +515,7 @@ init_cmaps_from_data()
 /* the following are original colormaps from ncview */
 
 	init_cmap_from_data( "3gauss",  cmap_3gauss  );
+	init_cmap_from_data( "batlow",  cmap_batlow  );
 	init_cmap_from_data( "detail",  cmap_detail  );
 	init_cmap_from_data( "ssec",    cmap_ssec    );
 

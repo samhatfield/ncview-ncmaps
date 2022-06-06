@@ -210,6 +210,7 @@ headers = ncview.bitmaps.h ncview.includes.h             \
           colormaps_hotres.h colormaps_3saw.h            \
           colormaps_default.h colormaps_extrema.h        \
           colormaps_helix.h colormaps_ssec.h             \
+          colormaps_batlow.h                             \
           overlay_coasts_p08deg.h overlay_coasts_p8deg.h \
           overlay_usa.h interface/closed_circle_bitmap.h \
           interface/open_circle_bitmap.h \
