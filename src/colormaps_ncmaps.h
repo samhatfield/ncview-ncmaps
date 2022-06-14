@@ -1,4 +1,4 @@
-// Colormaps provided by ncmaps - 2022-06-14T20:36:33.183352
+// Colormaps provided by ncmaps - 2022-06-14T20:42:40.618505
 
 #include "colormaps/colormaps_acton.h"
 #include "colormaps/colormaps_algae.h"
@@ -41,7 +41,6 @@
 #include "colormaps/colormaps_lisbon.h"
 #include "colormaps/colormaps_magma.h"
 #include "colormaps/colormaps_matter.h"
-#include "colormaps/colormaps_ncmaps.h"
 #include "colormaps/colormaps_nuuk.h"
 #include "colormaps/colormaps_oleron.h"
 #include "colormaps/colormaps_oslo.h"
@@ -113,7 +112,6 @@ init_cmap_from_data( "lapaz",  cmap_lapaz  ); \
 init_cmap_from_data( "lisbon",  cmap_lisbon  ); \
 init_cmap_from_data( "magma",  cmap_magma  ); \
 init_cmap_from_data( "matter",  cmap_matter  ); \
-init_cmap_from_data( "ncmaps",  cmap_ncmaps  ); \
 init_cmap_from_data( "nuuk",  cmap_nuuk  ); \
 init_cmap_from_data( "oleron",  cmap_oleron  ); \
 init_cmap_from_data( "oslo",  cmap_oslo  ); \
