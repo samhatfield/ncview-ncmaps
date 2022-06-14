@@ -25,34 +25,9 @@
 #include "ncview.defines.h"
 #include "ncview.protos.h"
 
-/* These hold data for our colormaps */
-
-/* A. Shchepetkin: new colormaps are added here */
-#include "colormaps_bright.h"
-#include "colormaps_banded.h"
-#include "colormaps_rainbow.h"
-#include "colormaps_jaisnb.h"
-#include "colormaps_jaisnc.h"
-#include "colormaps_jaisnd.h"
-#include "colormaps_blu_red.h"
-#include "colormaps_manga.h"
-#include "colormaps_jet.h"
-#include "colormaps_wheel.h"
-
-/* the following are original colormaps from ncview */
-#include "colormaps_3gauss.h"
-#include "colormaps_3saw.h"
-#include "colormaps_bw.h"
-#include "colormaps_default.h"
-#include "colormaps_detail.h"
-#include "colormaps_extrema.h"
-#include "colormaps_helix.h"
-#include "colormaps_helix2.h"
-#include "colormaps_hotres.h"
-#include "colormaps_ssec.h"
-
-/* Scientific color maps */
-#include "colormaps_batlow.h"
+/* Import all colormaps */
+#include "colormaps_original.h"
+#include "colormaps_ncmaps.h"
 
 /* Program defaults in a easy-to-find place */
 #define DEFAULT_INVERT_PHYSICAL	FALSE
@@ -512,35 +487,11 @@ get_cmaps_from_dir( char *dir_name )
 	void
 init_cmaps_from_data()
 {
-/* the following are original colormaps from ncview */
+	// Load original colormaps (see colormaps_original.h for definition of macro)
+	INIT_ORIG_CMAPS
 
-	init_cmap_from_data( "3gauss",  cmap_3gauss  );
-	init_cmap_from_data( "batlow",  cmap_batlow  );
-	init_cmap_from_data( "detail",  cmap_detail  );
-	init_cmap_from_data( "ssec",    cmap_ssec    );
-
-/* A. Shchepetkin: new colormaps are added here */
-
-        init_cmap_from_data( "bright",  cmap_bright  );
-        init_cmap_from_data( "banded",  cmap_banded  );
-        init_cmap_from_data( "rainbow", cmap_rainbow );
-        init_cmap_from_data( "jaisnb",  cmap_jaisnb  );
-        init_cmap_from_data( "jaisnc",  cmap_jaisnc  );
-        init_cmap_from_data( "jaisnd",  cmap_jaisnd  );
-        init_cmap_from_data( "blu_red", cmap_blu_red );
-        init_cmap_from_data( "manga",   cmap_manga   );
-        init_cmap_from_data( "jet",     cmap_jet     );
-        init_cmap_from_data( "wheel",   cmap_wheel   );
-
-/* the following are the rest of the original colormaps from ncview */
-
-	init_cmap_from_data( "3saw",    cmap_3saw    );
-	init_cmap_from_data( "bw",      cmap_bw      );
-	init_cmap_from_data( "default", cmap_default );
-	init_cmap_from_data( "extrema", cmap_extrema );
-	init_cmap_from_data( "helix",   cmap_helix   );
-	init_cmap_from_data( "helix2",  cmap_helix2  );
-	init_cmap_from_data( "hotres",  cmap_hotres  );
+	// Load ncmaps colormaps (see colormaps_ncmaps.h for definition of macro)
+	INIT_NCMAPS_CMAPS
 }
 
 /***********************************************************************************************/
